@@ -1,4 +1,4 @@
-# ArduinoMec
+# ArduinoMec2
 Arduino reader from buderus MEC2 controller
 
 Inspired by <a href="https://holzleitner.com/el/buderus-monitor/index-en.html">Peter Holzleitner</a> and <a href="https://github.com/bellerofonte/buderus-monitor">bellerofonte</a> I created a project on Arduino Mega2560 reading data from the bus on buderus logamatic 4xxx system. Retrieved data can be saved, or further processed.
