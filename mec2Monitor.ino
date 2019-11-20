@@ -144,7 +144,7 @@ void printOutdoor()
 void printSolar()
 {
   Serial.print("SOLAR teplota kolektora ");
-  float collTemp = (inBytes[5] * 256 + inBytes[6])/10;
+  float collTemp = (inBytes[5] * 256L + inBytes[6])/10;
   Serial.print(collTemp);
   Serial.print(" stupnov.");
   Serial.print(" Modulacia ");
@@ -183,7 +183,7 @@ void printSolar11()
 
 void printSolar1WorTime()
 {
-  long totalMins = 65536*inBytes[2] + 256*inBytes[3] + inBytes[4];
+  long totalMins = 65536L*inBytes[2] + 256L*inBytes[3] + inBytes[4];
   long totalHours = totalMins/60;
   int mins = totalMins - (totalHours * 60);
   Serial.print("Prevadzkovy cas ");
@@ -199,8 +199,8 @@ void printSolar1WorTime()
 
 void printBoilerWorkingTime()
 {
-  long totalHours = 65536*inBytes[4] + 256*inBytes[5] + inBytes[6];
-  long totalMins = (totalHours * 60) + inBytes[7];
+  long totalHours = 65536L*inBytes[4] + 256L*inBytes[5] + inBytes[6];
+  long totalMins = (totalHours * 60L) + inBytes[7];
   Serial.print("KOTOL: Modulacia ");
   Serial.print(inBytes[3]);
   Serial.print("%.");
