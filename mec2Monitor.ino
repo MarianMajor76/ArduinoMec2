@@ -144,7 +144,7 @@ void printOutdoor()
 void printSolar()
 {
   Serial.print("SOLAR teplota kolektora ");
-  float collTemp = (inBytes[5] * 256L + inBytes[6])/10;
+  float collTemp = inBytes[5] <= 127 ? (inBytes[5] * 256L + inBytes[6])/10.0 : -(65536 - (inBytes[5] * 256L + inBytes[6]))/10.0; //udavane v stupnoch C
   Serial.print(collTemp);
   Serial.print(" stupnov.");
   Serial.print(" Modulacia ");
